@@ -37,7 +37,7 @@ Much of the skill in writing unmaintainable code is the art of naming variables 
 
 #### New Uses For <cite>Names For Baby</cite>
 
-Buy a copy of a baby naming book and you'll never be at a loss for variable names. Fred is a wonderful name, and easy to type. If you're looking for easy-to-type variable names, try `adsf` or `aoeu` if you type with a DSK keyboard.
+Buy a copy of a baby naming book and you'll never be at a loss for variable names. Fred is a wonderful name, and easy to type. If you're looking for easy-to-type variable names, try `asdf` or `aoeu` if you type with a DSK keyboard.
 
 #### Single Letter Variable Names
 
