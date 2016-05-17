@@ -1106,20 +1106,20 @@ LISP is a dream language for the writer of unmaintainable code. Consider these b
 
 This one is specific to Visual Foxpro. A variable is undefined and can't be used unless you assign a value to it. This is what happens when you check a variable's type:
 
-```
+```foxpro
 lcx = TYPE('somevariable')
 ```
 
 The value of `lcx` will be `'U'` or `undefined`. BUT if you assign scope to the variable it sort of defines it and makes it a logical `FALSE`. Neat, huh!?
 
-```
+```foxpro
 LOCAL lcx
 lcx = TYPE('somevariable')
 ```
 
 The value of lcx is now `'L'` or logical. It is further defined the value of `FALSE`. Just imagine the power of this in writing unmaintainable code.
 
-```
+```foxpro
 LOCAL lc_one, lc_two, lc_three... , lc_n
 IF lc_one
 DO some_incredibly_complex_operation_that_will_neverbe_executed WITH
