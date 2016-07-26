@@ -336,7 +336,7 @@ In C++, overload `+`, `-`, `*`, and `/` to do things totally unrelated to additi
 
 #### Overload new
 
-Overload the `new` operator - much more dangerous than overloading the `+-/*`. This can cause total havoc if overloaded to do something different from it's original function (but vital to the object's function so it's very difficult to change). This should ensure users trying to create a dynamic instance get really stumped. You can combine this with the case sensitivity trick also have a member function, and variable called "New".
+Overload the `new` operator - much more dangerous than overloading the `+-/*`. This can cause total havoc if overloaded to do something different from its original function (but vital to the object's function so it's very difficult to change). This should ensure users trying to create a dynamic instance get really stumped. You can combine this with the case sensitivity trick also have a member function, and variable called "New".
 
 #### #define
 
