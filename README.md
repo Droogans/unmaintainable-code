@@ -1369,4 +1369,4 @@ An early version of this article appeared in Java Developers' Journal (volume 2 
 
 This essay is a **joke**! I apologise if anyone took this literally. Canadians think it gauche to label jokes with a :-). People paid no attention when I harped about how to write __maintainable code. I found people were more receptive hearing all the goofy things people often do to muck it up. Checking for **un**maintainable design patterns is a rapid way to defend against malicious or inadvertent sloppiness.
 
-_**<small>The original was published on [Roedy Green's Mindproducts](http://mindprod.com/unmain.html) site.</small>**_
+_**<small>The original was published on [Roedy Green's Mindproducts](http://mindprod.com/jgloss/unmain.html) site.</small>**_
