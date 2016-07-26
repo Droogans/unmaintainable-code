@@ -728,7 +728,7 @@ Java offers great opportunity for obfuscation whenever you have to convert. As a
 
 #### Nesting
 
-Nest as deeply as you can. Good coders can get up to 10 levels of `( )` on a single line and 20 `{ }` in a single method. C++ coders have the additional powerful option of preprocessor nesting totally independent of the nest structure of the underlying code. You earn extra Brownie points whenever the beginning and end of a block appear on separate pages in a printed listing. Wherever possible, convert nested ifs into nested [? ] ternaries. If they span several lines, so much the better.
+Nest as deeply as you can. Good coders can get up to 10 levels of `( )` on a single line and 20 `{ }` in a single method. C++ coders have the additional powerful option of preprocessor nesting totally independent of the nest structure of the underlying code. You earn extra Brownie points whenever the beginning and end of a block appear on separate pages in a printed listing. Wherever possible, convert nested ifs into nested [?:] ternaries. If they span several lines, so much the better.
 
 #### Numeric Literals
 
@@ -753,7 +753,7 @@ Unfortunately, these techniques can only be used in native C classes, not Java.
 
 #### L o n g   L i n e s
 
-Try to pack as much as possible into a single line. This saves the overhead of temporary variables, and makes source files shorter by eliminating new line characters and white space. Tipremove all white space around operators. Good programmers can often hit the 255 character line length limit imposed by some editors. The bonus of long lines is that programmers who cannot read 6 point type must scroll to view them.
+Try to pack as much as possible into a single line. This saves the overhead of temporary variables, and makes source files shorter by eliminating new line characters and white space. Tip: remove all white space around operators. Good programmers can often hit the 255 character line length limit imposed by some editors. The bonus of long lines is that programmers who cannot read 6 point type must scroll to view them.
 
 #### Exceptions
 
