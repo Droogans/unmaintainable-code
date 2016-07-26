@@ -3,7 +3,7 @@
 ## Ensure a job for life ;-)
 
 **Roedy Green**
- [**Canadian Mind Products**](http://mindprod.com/unmain.html)
+ [**Canadian Mind Products**](http://mindprod.com/jgloss/unmain.html)
 
 * * *
 
