@@ -505,7 +505,7 @@ If a module in a library needs an array to hold an image, just define a static a
 
 #### Dummy Interfaces
 
-Write an empty interface called something like `WrittenByMe`, and make all of your classes implement it. Then, write wrapper classes for any of Java's built-in classes that you use. The idea is to make sure that every single object in your program implements this interface. Finally, write all methods so that both their arguments and return types are `WrittenByMe`. This makes it nearly impossible to figure out what some methods do, and introduces all sorts of entertaining casting requirements. For a further extension, have each team member have his/her own personal interface (e.g., `WrittenByJoe`); any class worked on by a programmer gets to implement his/her interface. You can then arbitrary refer to objects by any one of a large number of meaningless interfaces!
+Write an empty interface called something like `WrittenByMe`, and make all of your classes implement it. Then, write wrapper classes for any of Java's built-in classes that you use. The idea is to make sure that every single object in your program implements this interface. Finally, write all methods so that both their arguments and return types are `WrittenByMe`. This makes it nearly impossible to figure out what some methods do, and introduces all sorts of entertaining casting requirements. For a further extension, have each team member have his/her own personal interface (e.g., `WrittenByJoe`); any class worked on by a programmer gets to implement his/her interface. You can then arbitrarily refer to objects by any one of a large number of meaningless interfaces!
 
 #### Giant Listeners
 
