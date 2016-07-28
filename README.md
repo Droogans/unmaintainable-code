@@ -623,7 +623,7 @@ Within the body of a loop, assume that the loop action is successful and immedia
 
 #### Reduce, Reuse, Recycle
 
-If you have to define a structure to hold data for callbacks, always call the structure `PRIVDATA`. Every module can define it's own `PRIVDATA`. In VC++, this has the advantage of confusing the debugger so that if you have a `PRIVDATA` variable and try to expand it in the watch window, it doesn't know which `PRIVDATA` you mean, so it just picks one.
+If you have to define a structure to hold data for callbacks, always call the structure `PRIVDATA`. Every module can define its own `PRIVDATA`. In VC++, this has the advantage of confusing the debugger so that if you have a `PRIVDATA` variable and try to expand it in the watch window, it doesn't know which `PRIVDATA` you mean, so it just picks one.
 
 #### Configuration Files
 
