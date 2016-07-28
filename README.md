@@ -135,7 +135,7 @@ Ignore the [Sun Java Coding Conventions](http://java.sun.com/docs/codeconv/), af
 
 #### Lower Case l Looks a Lot Like the Digit 1
 
-Use lower case l to indicate long constants. e.g. `10l` is more likely to be mistaken for `101` that `10L` is. Ban any fonts that clearly disambiguate `uvw`, `wW`, `gq9`, `2z`, `5s`, `il17|!j`, `oO08`, `` `'" ``, `;,.`,  `m nn rn`, and `{[()]}`. Be creative.
+Use lower case l to indicate long constants. e.g. `10l` is more likely to be mistaken for `101` than `10L` is. Ban any fonts that clearly disambiguate `uvw`, `wW`, `gq9`, `2z`, `5s`, `il17|!j`, `oO08`, `` `'" ``, `;,.`, `m nn rn`, and `{[()]}`. Be creative.
 
 #### Reuse of Global Names as Private
 
@@ -865,7 +865,7 @@ import MyPackage.Write;
 use:
 
 ```java
-import Mypackage. *;
+import Mypackage.*;
 ```
 
 Never fully qualify any method or class no matter how obscure. Let the maintenance programmer guess which of the packages/classes it belongs to. Of course, inconsistency in when you fully qualify and how you do your imports helps most.
@@ -1000,10 +1000,10 @@ Avoid coding in Abundance, or using any of its principles kludged into other lan
 
 ## Dealing With Others
 
-> __Hell is other people._ _
+> _Hell is other people._
 > - Jean-Paul Sartre, No Exit, 1934
 
-There are many hints sprinkled thoroughout the tips above on how to rattle maintenance programmers though frustration, and how to foil your boss's attempts to stop you from writing unmaintainable code, or even how to foment an RWAR that involves everyone on the topic of how code should be formatted in the repository.
+There are many hints sprinkled throughout the tips above on how to rattle maintenance programmers though frustration, and how to foil your boss's attempts to stop you from writing unmaintainable code, or even how to foment an RWAR that involves everyone on the topic of how code should be formatted in the repository.
 
 #### Your Boss Knows Best
 
@@ -1168,7 +1168,7 @@ The more changes you can make between versions the better, you don't want users 
 
 #### Put C Prototypes In Individual Files
 
-instead of common headers. This has the dual advantage of requiring a change in parameter data type to be maintained in every file, **and** avoids any chance that the compiler or linker will detect type mismatches. This will be especially helpful when porting from 32 -> 64 bit platforms.
+Instead of common headers. This has the dual advantage of requiring a change in parameter data type to be maintained in every file, **and** avoids any chance that the compiler or linker will detect type mismatches. This will be especially helpful when porting from 32 -> 64 bit platforms.
 
 #### No Skill Required
 
@@ -1191,7 +1191,7 @@ Reverse the usual definitions of true and false. Sounds very obvious but it work
 #define FALSE 1
 ```
 
-somewhere deep in the code so that it is dredged up from the bowels of the program from some file that noone ever looks at anymore. Then force the program to do comparisons like:
+somewhere deep in the code so that it is dredged up from the bowels of the program from some file that no-one ever looks at anymore. Then force the program to do comparisons like:
 
 ```c
 if ( var == TRUE )
