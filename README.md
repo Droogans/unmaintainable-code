@@ -851,7 +851,7 @@ if ( function_A() == OK )
 
 #### Pseudo C
 
-The real reason for `#define` was to help programmers who are familiar with another programming language to switch to C. Maybe you will find declarations like `#define begin { " or " #define end }` useful to write more interesting code.
+The real reason for `#define` was to help programmers who are familiar with another programming language to switch to C. Maybe you will find declarations like `#define begin {` or `#define end }` useful to write more interesting code.
 
 #### Confounding Imports
 
