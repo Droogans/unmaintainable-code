@@ -218,7 +218,7 @@ Much of the skill in writing unmaintainable code is the art of camouflage, hidin
 
 #### Code That Masquerades As Comments and Vice Versa
 
-Include sections of code that is commented out but at first glance does not appear to be.
+Include sections of code that are commented out but at first glance do not appear to be.
 
 ```js
 for(j=0; j<array_len; j+ =8)
