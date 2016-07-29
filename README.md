@@ -1339,6 +1339,12 @@ and `refcode.h` is no where to be found.
 
 At least one variable should be set everywhere and used almost nowhere. Unfortunately, modern compilers usually stop you from doing the reverse, read everywhere, write nowhere, but you can still do it in C or C++.
 
+#### Don't make lazy Classes
+
+Classes shouldn't have just one responsibility. They get lazy over a period of time. Its best to load up classes with billions of responsibilities. Class's work done is propotional to class's fitness. Classes are best served being jack of all trades and master of all. 
+Infact just have one class in your entire software. Any change is just change in once class, speeding up the development time immensely.
+ 
+
 ## Philosophy
 
 The people who design languages are the people who write the compilers and system classes. Quite naturally they design to make their work easy and mathematically elegant. However, there are 10,000 maintenance programmers to every compiler writer. The grunt maintenance programmers have absolutely no say in the design of languages. Yet the total amount of code they write dwarfs the code in the compilers.
