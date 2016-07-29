@@ -24,7 +24,7 @@ To foil the maintenance programmer, you have to understand how he thinks. He has
 
 He views your code through a toilet paper tube. He can only see a tiny piece of your program at a time. You want to make sure he can never get at the big picture from doing that. You want to make it as hard as possible for him to find the code he is looking for. But even more important, you want to make it as awkward as possible for him to safely **ignore** anything.
 
-Programmers are lulled into complacency by conventions. By every once in a while, by subtly violating convention, you force him to read every line of your code with a magnifying glass.
+Programmers are lulled into complacency by conventions. But every once in a while, by subtly violating convention, you force him to read every line of your code with a magnifying glass.
 
 You might get the idea that every language feature makes code unmaintainable -- not so, only if properly misused.
 
@@ -53,7 +53,7 @@ In naming functions and variables, make heavy use of abstract words like _it_, _
 
 #### A.C.R.O.N.Y.M.S.
 
-Use acronyms to keep the code terse. Real men never define acronyms; they understand them genetically.
+Use acronyms to keep the code terse. Real men never define acronyms; they understand them genetically. When using an acronym within a variable name, be sure to capitalize it in various ways e.g. `homeURL` vs `homeUrL`. This is especially effective when you fail to capitalize the _first_ letter of the acronym, allowing you to obfuscate where the main word ends or begins e.g. `variablesQL` vs `variableSQL`
 
 #### Thesaurus Surrogatisation
 
