@@ -772,7 +772,7 @@ title says it all.
 Follow the language lawyer discussions in the newsgroups about what various bits of tricky code should do e.g. `a=a++;` or `f(a++,a++);` then sprinkle your code liberally with the examples. In C, the effects of pre/post decrement code such as
 
 ```c
-*++b ? (*++b + *(b-1)) 0
+*++b ? (*++b + *(b-1)) : 0
 ```
 
 are not defined by the language spec. Every compiler is free to evaluate in a different order. This makes them doubly deadly. Similarly, take advantage of the complex tokenising rules of C and Java by removing all spaces.
