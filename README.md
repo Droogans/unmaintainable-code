@@ -617,6 +617,10 @@ In C, functions are supposed to be idempotent, (without side effects). I hope th
 
 Within the body of a loop, assume that the loop action is successful and immediately update all pointer variables. If an exception is later detected on that loop action, back out the pointer advancements as side effects of a conditional expression following the loop body.
 
+#### Local Variables
+
+Never use local variables. Whenever you feel the temptation to use one, make it into an instance or static variable instead to unselfishly share it with all the other methods of the class. This will save you work later when other methods need similar declarations. C++ programmers can go a step further by making all variables global.
+
 #### Reduce, Reuse, Recycle
 
 If you have to define a structure to hold data for callbacks, always call the structure `PRIVDATA`. Every module can define its own `PRIVDATA`. In VC++, this has the advantage of confusing the debugger so that if you have a `PRIVDATA` variable and try to expand it in the watch window, it doesn't know which `PRIVDATA` you mean, so it just picks one.
