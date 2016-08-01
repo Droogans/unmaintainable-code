@@ -617,10 +617,6 @@ In C, functions are supposed to be idempotent, (without side effects). I hope th
 
 Within the body of a loop, assume that the loop action is successful and immediately update all pointer variables. If an exception is later detected on that loop action, back out the pointer advancements as side effects of a conditional expression following the loop body.
 
-#### Local Variables
-
-Within the body of a loop, assume that the loop action is successful and immediately update all pointer variables. If an exception is later detected on that loop action, back out the pointer advancements as side effects of a conditional expression following the loop body.
-
 #### Reduce, Reuse, Recycle
 
 If you have to define a structure to hold data for callbacks, always call the structure `PRIVDATA`. Every module can define its own `PRIVDATA`. In VC++, this has the advantage of confusing the debugger so that if you have a `PRIVDATA` variable and try to expand it in the watch window, it doesn't know which `PRIVDATA` you mean, so it just picks one.
