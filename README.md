@@ -1315,7 +1315,7 @@ i = i;
 
 It almost goes without saying that the larger a function is, the better it is. And the more jumps and GOTOs the better. That way, any change must be analysed through many scenarios. It snarls the maintenance programmer in the spaghettiness of it all. And if the function is truly gargantuan, it becomes the Godzilla of the maintenance programmers, stomping them mercilessly to the ground before they have an idea of what's happened.
 
-#### A Picture is a 1000 Words; A Function is 1000 Lines
+#### A Picture is a 1000 Words; A Function is a 1000 Lines
 
 Make the body of every method as long as possible - hopefully you never write any methods or functions with fewer than a thousand lines of code, deeply nested, of course.
 
