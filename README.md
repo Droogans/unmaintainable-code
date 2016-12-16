@@ -263,7 +263,7 @@ Hide macro definitions in amongst rubbish comments. The programmer will get bore
 
 #### Look Busy
 
-use `define` statements to make made up functions that simply comment out their arguments, e.g.:
+Use `define` statements to make made up functions that simply comment out their arguments, e.g.:
 
 ```c
 #define fastcopy(x,y,z) /*xyz*/
