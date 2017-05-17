@@ -286,7 +286,7 @@ break up `xy_z` onto two lines:
 _z // local_var OK
 ```
 
-That way a global search for `xy_z` will come up with nothing for that file. To the C preprocessor, the "\" at the end of the line means glue this line to the next one.
+That way a global search for `xy_z` will come up with nothing for that file. To the C preprocessor, the `\` at the end of the line means glue this line to the next one.
 
 #### Arbitrary Names That Masquerade as Keywords
 
