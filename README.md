@@ -393,6 +393,10 @@ Pepper the code with comments like `/* add 1 to i */` however, never document wo
 
 Document only the details of what a program does, not what it is attempting to accomplish. That way, if there is a bug, the fixer will have no clue what the code should be doing.
 
+#### If Forced, Always Write "Why" Comments Over Self-Documented Code
+
+If you are forced to comment the "why", always comment the "why" of every single new function, class or method without thinking carefully. Don't make the description on the VCS, the name and the tests or new function, class or method clear enough to represent its purpose, preferably [abbreviate them](#cd-wrttn-wtht-vwls-s-mch-trsr), so that the next developer is required to read and maintain the comment instead of just maintaining the code and the tests.
+
 #### Avoid Documenting the "Obvious"
 
 If, for example, you were writing an airline reservation system, make sure there are at least 25 places in the code that need to be modified if you were to add another airline. Never document where they are. People who come after you have no business modifying your code without thoroughly understanding every line of it.
