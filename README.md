@@ -53,7 +53,7 @@ In naming functions and variables, make heavy use of abstract words like _it_, _
 
 #### A.C.R.O.N.Y.M.S.
 
-Use acronyms to keep the code terse. Real men never define acronyms; they understand them genetically.
+Use acronyms to keep the code terse. Real men never define acronyms; they understand them genetically. When using an acronym within a variable name, be sure to capitalize it in various ways e.g. `homeURL` vs `homeUrL`. This is especially effective when you fail to capitalize the _first_ letter of the acronym, allowing you to obfuscate where the main word ends or begins e.g. `variablesQL` vs `variableSQL`
 
 #### Thesaurus Surrogatisation
 
