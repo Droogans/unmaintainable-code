@@ -85,9 +85,10 @@ where the second ínt's í is actually i-acute. With only a simple text editor, 
 
 If the compiler will only distinguish the first, say, 8 characters of names, then vary the endings e.g. `var_unit_update()` in one case and `var_unit_setup()` in another. The compiler will treat both as `var_unit`.
 
-#### Underscore, a Friend Indeed
+#### Underscores and dashes, Friends Indeed
 
-Use `_` and `__` as identifiers.
+Use `_` and `__` as identifiers.  
+Eastern languages conveniently have also em-dashes, en-dashes, and figure dashes. So you have `—`, `‒`, and `–` in addition to your standard `-` hyphen. Using those would provide much-needed additional value to your knowledge.  
 
 #### Mix Languages
 
