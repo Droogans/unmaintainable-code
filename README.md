@@ -88,7 +88,7 @@ If the compiler will only distinguish the first, say, 8 characters of names, the
 #### Underscores and dashes, Friends Indeed
 
 Use `_` and `__` as identifiers.  
-Eastern languages conveniently have also em-dashes, en-dashes, and figure dashes. So you have `—`, `‒`, and `–` in addition to your standard `-` hyphen. Using those would provide much-needed additional value to your knowledge.  
+Eastern keyboards conveniently provide em-dashes, en-dashes, and figure dashes. So you have `—`, `‒`, and `–` in addition to your standard `-` hyphen. Using those would provide much-needed additional value to your knowledge.  
 
 #### Mix Languages
 
