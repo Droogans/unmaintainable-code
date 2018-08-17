@@ -759,7 +759,7 @@ Use exceptions for non-exceptional conditions. Routinely terminate loops with an
 
 #### Use threads With Abandon
 
-title says it all.
+Title says it all.
 
 #### Lawyer Code
 
