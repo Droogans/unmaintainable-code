@@ -807,7 +807,7 @@ It offers great opportunities for obfuscation. The key technique is to nest macr
 
 #### Exploit Schizophrenia
 
-Java is schizophrenic about array declarations. You can do them the old C, way `String x[]`, (which uses mixed pre-postfix notation) or the new way `String[] x`, which uses pure prefix notation. If you want to really confuse people, mix the notationse.g.
+Java is schizophrenic about array declarations. You can do them the old C, way `String x[]`, (which uses mixed pre-postfix notation) or the new way `String[] x`, which uses pure prefix notation. If you want to really confuse people, mix the notations e.g.
 
 ```java
 byte[ ] rowvector, colvector , matrix[ ];
