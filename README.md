@@ -221,16 +221,15 @@ Much of the skill in writing unmaintainable code is the art of camouflage, hidin
 Include sections of code that are commented out but at first glance do not appear to be.
 
 ```js
-for(j=0; j<array_len; j+ =8)
-{
-total += array[j+0 ];
-total += array[j+1 ];
-total += array[j+2 ]; /* Main body of
-total += array[j+3 ]; * loop is unrolled
-total += array[j+4 ]; * for greater speed.
-total += array[j+5 ]; */
-total += array[j+6 ];
-total += array[j+7 ];
+for (j=0; j<array_len; j+=8) {
+    total += array[j+0];
+    total += array[j+1];
+    total += array[j+2]; /* Main body of
+    total += array[j+3]; * loop is unrolled
+    total += array[j+4]; * for greater speed.
+    total += array[j+5]; */
+    total += array[j+6];
+    total += array[j+7];
 }
 ```
 
@@ -242,14 +241,14 @@ Struct/union and typedef struct/union are different name spaces in C (not in C++
 
 ```c
 typedef struct {
-char* pTr;
-size_t lEn;
+    char* pTr;
+    size_t lEn;
 } snafu;
 
 struct snafu {
-unsigned cNt
-char* pTr;
-size_t lEn;
+    unsigned cNt
+    char* pTr;
+    size_t lEn;
 } A;
 ```
 
@@ -441,10 +440,9 @@ Discourage any attempt to use external maintenance contractors by peppering your
 This stuff is too clever for the dullard at Software Services Inc., who would
 probably use 50 times as memory & time using the dumb routines in <math.h>.
 */
-class clever_SSInc
-    {
+class clever_SSInc {
     .. .
-    }
+}
 ```
 
 If possible, put insulting stuff in syntactically significant parts of the code, as well as just the comments so that management will probably break the code if they try to sanitise it before sending it out for maintenance.
@@ -515,10 +513,9 @@ Go wild with encapsulation and oo. For example:
 
 ```java
 myPanel.add( getMyButton() );
-private JButton getMyButton()
-    {
+private JButton getMyButton() {
     return myButton;
-    }
+}
 ```
 
 That one probably did not even seem funny. Don't worry. It will some day.
@@ -653,18 +650,17 @@ Always look for the most obscure way to do common tasks. For example, instead of
 
 ```c
 char *p;
-switch (n)
-{
-case 1:
-    p = "one";
-    if (0)
-case 2:
-    p = "two";
-    if (0)
-case 3:
-    p = "three";
-    printf("%s", p);
-    break;
+switch (n) {
+    case 1:
+        p = "one";
+        if (0)
+    case 2:
+        p = "two";
+        if (0)
+    case 3:
+        p = "three";
+        printf("%s", p);
+        break;
 }
 ```
 
@@ -707,12 +703,11 @@ d = c;
 Smuggle octal literals into a list of decimal numbers like this:
 
 ```java
-array = new int []
-{
-111,
-120,
-013,
-121,
+array = new int [] {
+    111,
+    120,
+    013,
+    121,
 };
 ```
 
