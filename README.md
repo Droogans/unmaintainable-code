@@ -396,7 +396,7 @@ Document only the details of what a program does, not what it is attempting to a
 
 If, for example, you were writing an airline reservation system, make sure there are at least 25 places in the code that need to be modified if you were to add another airline. Never document where they are. People who come after you have no business modifying your code without thoroughly understanding every line of it.
 
-#### On the Proper Use Of Documentation Templates
+#### On the Proper Use of Documentation Templates
 
 Consider function documentation prototypes used to allow automated documentation of the code. These prototypes should be copied from one function (or method or class) to another, but never fill in the fields. If for some reason you are forced to fill in the fields make sure that all parameters are named the same for all functions, and all cautions are the same but of course not related to the current function at all.
 
