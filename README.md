@@ -131,7 +131,7 @@ Never use `i` for the innermost loop variable. Use anything but. Use `i` liberal
 #### Conventions Schmentions
 
 
-Ignore the [Sun Java Coding Conventions](http://web.archive.org/web/20091003224540/http://java.sun.com/docs/codeconv/), after all, Sun does. Fortunately, the compiler won't tattle when you violate them. The goal is to come up with names that differ subtlely only in case. If you are forced to use the capitalisation conventions, you can still subvert wherever the choice is ambigous, e.g. use *both* _input**F**ile**n**ame_ and _input**f**ile**N**ame_. Invent your own hopelessly complex naming conventions, then berate everyone else for not following them.
+Ignore the [Sun Java Coding Conventions](http://web.archive.org/web/20091003224540/http://java.sun.com/docs/codeconv/), after all, Sun does. Fortunately, the compiler won't tattle when you violate them. The goal is to come up with names that differ subtly only in case. If you are forced to use the capitalisation conventions, you can still subvert wherever the choice is ambiguous, e.g. use *both* _input**F**ile**n**ame_ and _input**f**ile**N**ame_. Invent your own hopelessly complex naming conventions, then berate everyone else for not following them.
 
 #### Lower Case l Looks a Lot Like the Digit 1
 
@@ -188,7 +188,7 @@ Hungarian Notation is the tactical nuclear weapon of source code obfuscation tec
 
 #### Hungarian Notation Revisited
 
-One followon trick in the Hungarian notation is "change the type of a variable but leave the variable name unchanged". This is almost invariably done in windows apps with the migration from Win16:
+One follow-on trick in the Hungarian notation is "change the type of a variable but leave the variable name unchanged". This is almost invariably done in windows apps with the migration from Win16:
 
 ```c
 WndProc(HWND hW, WORD wMsg, WORD wParam, LONG lParam)
@@ -313,7 +313,7 @@ Maintenance programmers, in order to see if they'll be any cascading effects to 
 #define local_var xy_z // in file ..\codestd\inst.h
 ```
 
-These defs should be scattered through different include-files. They are especially effective if the include-files are located in different directories. The other technique is to reuse a name in every scope. The compiler can tell them apart, but a simple minded text searcher cannot. Unfortunately SCIDs in the coming decade will make this simple technique impossible. since the editor understands the scope rules just as well as the compiler.
+These defs should be scattered through different include-files. They are especially effective if the include-files are located in different directories. The other technique is to reuse a name in every scope. The compiler can tell them apart, but a simple minded text searcher cannot. Unfortunately SCIDs in the coming decade will make this simple technique impossible, since the editor understands the scope rules just as well as the compiler.
 
 #### Long Similar Variable Names
 
@@ -370,7 +370,7 @@ This one gets fun when passing `g()` a `char*`, because a different version of `
 
 #### Compiler Directives
 
-Compiler directives were designed with the express purpose of making the same code behave completely differently. Turn the boolean short-circuiting directive on and off repeatedly and vigourously, as well as the long strings directive.
+Compiler directives were designed with the express purpose of making the same code behave completely differently. Turn the boolean short-circuiting directive on and off repeatedly and vigorously, as well as the long strings directive.
 
 ## Documentation
 
@@ -386,7 +386,7 @@ You don't have to actively lie, just fail to keep comments as up to date with th
 
 #### Document the obvious
 
-Pepper the code with comments like `/* add 1 to i */` however, never document wooly stuff like the overall purpose of the package or method.
+Pepper the code with comments like `/* add 1 to i */` however, never document woolly stuff like the overall purpose of the package or method.
 
 #### Document How Not Why
 
@@ -530,7 +530,7 @@ Lots of them. Move data between the arrays in convoluted ways, say, filling the 
 
 #### Mix and Match
 
-Use both accessor methods and public variables. That way, you can change an object's variable without the overhead of calling the accessor, but still claim that the class is a "Java Bean". This has the additional advantage of frustrating the maintenence programmer who adds a logging function to try to figure out who is changing the value.
+Use both accessor methods and public variables. That way, you can change an object's variable without the overhead of calling the accessor, but still claim that the class is a "Java Bean". This has the additional advantage of frustrating the maintenance programmer who adds a logging function to try to figure out who is changing the value.
 
 #### Wrap, wrap, wrap
 
@@ -560,7 +560,7 @@ Instead of using a parameter to a single method, create as many separate methods
 
 Make as many of your variables as possible static. If _you_ don't need more than one instance of the class in this program, no one else ever will either. Again, if other coders in the project complain, tell them about the execution speed improvement you're getting.
 
-#### Cargill's Quandry
+#### Cargill's Quandary
 
 Take advantage of Cargill's quandary (I think this was his) "any design problem can be solved by adding an additional level of indirection, except for too many levels of indirection." Decompose OO programs until it becomes nearly impossible to find a method which actually updates program state. Better yet, arrange all such occurrences to be activated as callbacks from by traversing pointer forests which are known to contain every function pointer used within the entire system. Arrange for the forest traversals to be activated as side-effects from releasing reference counted objects previously created via deep copies which aren't really all that deep.
 
@@ -721,7 +721,7 @@ Nest as deeply as you can. Good coders can get up to 10 levels of `( )` on a sin
 
 #### Numeric Literals
 
-If you have an array with 100 elements in it, hard code the literal 100 in as many places in the program as possible. Never use a static final named constant for the 100, or refer to it as `myArray.length`. To make changing this constant even more difficult, use the literal 50 instead of 100/2, or 99 instead of 100-1. You can futher disguise the 100 by checking for `a == 101` instead of `a > 100`, or `a > 99` instead of `a >= 100`.
+If you have an array with 100 elements in it, hard code the literal 100 in as many places in the program as possible. Never use a static final named constant for the 100, or refer to it as `myArray.length`. To make changing this constant even more difficult, use the literal 50 instead of 100/2, or 99 instead of 100-1. You can further disguise the 100 by checking for `a == 101` instead of `a > 100`, or `a > 99` instead of `a >= 100`.
 Consider things like page sizes, where the lines consisting of x header, y body, and z footer lines, you can apply the obfuscations independently to each of these and to their partial or total sums.
 
 These time-honoured techniques are especially effective in a program with two unrelated arrays that just accidentally happen to both have 100 elements. If the maintenance programmer has to change the length of one of them, he will have to decipher every use of the literal 100 in the program to determine which array it applies to. He is almost sure to make at least one error, hopefully one that won't show up for years later.
@@ -1209,7 +1209,7 @@ Make it so elaborate that no maintainer could ever get any of his or her fixes t
 
 #### More Fun With Make
 
-Have the makefile-generated-batch-file copy source files from multiple directories with undocumented overrwrite rules. This permits code branching without the need for any fancy source code control system, and stops your successors ever finding out which version of `DoUsefulWork()` is the one they should edit.
+Have the makefile-generated-batch-file copy source files from multiple directories with undocumented overwrite rules. This permits code branching without the need for any fancy source code control system, and stops your successors ever finding out which version of `DoUsefulWork()` is the one they should edit.
 
 #### Collect Coding Standards
 
@@ -1332,7 +1332,7 @@ At least one variable should be set everywhere and used almost nowhere. Unfortun
 
 The people who design languages are the people who write the compilers and system classes. Quite naturally they design to make their work easy and mathematically elegant. However, there are 10,000 maintenance programmers to every compiler writer. The grunt maintenance programmers have absolutely no say in the design of languages. Yet the total amount of code they write dwarfs the code in the compilers.
 
-An example of the result of this sort of elitist thinking is the JDBC interface. It makes life easy for the JDBC implementor, but a nightmare for the maintenance programmer. It is far **clumsier** than the FORTRAN interface that came out with SQL three decades ago.
+An example of the result of this sort of elitist thinking is the JDBC interface. It makes life easy for the JDBC implementer, but a nightmare for the maintenance programmer. It is far **clumsier** than the FORTRAN interface that came out with SQL three decades ago.
 
 Maintenance programmers, if somebody ever consulted them, would demand ways to hide the housekeeping details so they could see the forest for the trees. They would demand all sorts of shortcuts so they would not have to type so much and so they could see more of the program at once on the screen. They would complain loudly about the myriad petty time-wasting tasks the compilers demand of them.
 
