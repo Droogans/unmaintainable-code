@@ -9,7 +9,7 @@
 
 ## Introduction
 
-> _Never ascribe to malice, that which can be explained by incompetence._ - Napoleon
+> _Never ascribe to malice, that which can be explained by incompetence._ - Hanlon's razor
 
 In the interests of creating employment opportunities in the Java programming field, I am passing on these tips from the masters on how to write code that is so difficult to maintain, that the people who come after you will take years to make even the simplest changes. Further, if you follow all these rules religiously, you will even guarantee **yourself** a lifetime of employment, since no one but you has a hope in hell of maintaining the code. Then again, if you followed **all** these rules religiously, even you wouldn't be able to maintain the code!
 
