@@ -126,7 +126,7 @@ This trick works especially well in Ada, a language immune to many of the standa
 
 #### When To Use i
 
-Never use `i` for the innermost loop variable. Use anything but. Use `i` liberally for any other purpose especially for non-int variables. Similarly use `n` as a loop index.
+Never use `i` for the innermost loop variable. Use anything but `i`. Use `i` liberally for any other purpose especially for non-int variables. Similarly use `n` as a loop index.
 
 #### Conventions Schmentions
 
