@@ -1300,6 +1300,18 @@ If your compiler issues "unused local variable" warnings, don't get rid of the v
 i = i;
 ```
 
+Sometimes compilers can issue "assigning value of variable to itself" warning. Thankfully, we can easily fix this with
+
+```c#
+int a = 123;
+a = (int) a;
+```
+or
+
+```c
+a = *&a;
+```
+
 #### It's The Size That Counts
 
 It almost goes without saying that the larger a function is, the better it is. And the more jumps and GOTOs the better. That way, any change must be analysed through many scenarios. It snarls the maintenance programmer in the spaghettiness of it all. And if the function is truly gargantuan, it becomes the Godzilla of the maintenance programmers, stomping them mercilessly to the ground before they have an idea of what's happened.
