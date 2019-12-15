@@ -1213,7 +1213,7 @@ Have the makefile-generated-batch-file copy source files from multiple directori
 
 #### Collect Coding Standards
 
-Find all the tips you can on writing maintainable code such as the [Square Box Suggestions](http://www.squarebox.co.uk/javatips.html) and flagrantly violate them.
+Find all the tips you can on writing maintainable code such as the [Square Box Suggestions](http://www.squarebox.co.uk/download/javatips.html) and flagrantly violate them.
 
 #### IDE, Not Me!
 
