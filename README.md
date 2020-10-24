@@ -185,6 +185,8 @@ Hungarian Notation is the tactical nuclear weapon of source code obfuscation tec
     * a single function call that passes three parameters and assigns a result carries 29 pieces of type and name information.
     * Seek to improve this excellent, but far too concise, standard. Impress management and coworkers by recommending a 5 letter day of the week prefix to help isolate code written on `Monam` and `FriPM`.
     * It is easy to overwhelm the short term memory with even a moderately complex nesting structure, **especially** when the maintenance programmer can't see the start and end of each block on screen simultaneously.
+    
+ - When the language allows it, and where Hungarian is not your native language, use actual Hungarian for variable names rather than your native language, claiming all the while that the ability to make compound words in the language increases the efficiency of the code. To use the previous example, the individual who came up with `a_crszkvc30LastNameCol` could have impressed others on a new level had they instead named the variable `a_crszkvc30VezetéknévOszlop`.
 
 #### Hungarian Notation Revisited
 
