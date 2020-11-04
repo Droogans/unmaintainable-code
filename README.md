@@ -5,6 +5,8 @@
 **Roedy Green**
  [**Canadian Mind Products**](http://mindprod.com/jgloss/unmain.html)
 
+<sup>Reproduced [with permission from the author](https://github.com/Droogans/unmaintainable-code/issues/3#issuecomment-235317722), circa 2015</sup>
+
 * * *
 
 ## Introduction
