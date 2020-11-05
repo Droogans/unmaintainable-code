@@ -63,7 +63,7 @@ To break the boredom, use a thesaurus to look up as much alternate vocabulary as
 
 #### Use Plural Forms From Other Languages
 
-A VMS script kept track of the "statii" returned from various "Vaxen". Esperanto , [Klingon](http://www.kli.org/) and [Hobbitese](http://www.chriswetherell.com/hobbit) qualify as languages for these purposes. For pseudo-Esperanto pluraloj, add oj. You will be doing your part toward world peace.
+A VMS script kept track of the "statii" returned from various "Vaxen". Esperanto , [Klingon](http://www.kli.org/) and Hobbitese qualify as languages for these purposes. For pseudo-Esperanto pluraloj, add oj. You will be doing your part toward world peace.
 
 #### CapiTaliSaTion
 
