@@ -173,7 +173,7 @@ Hungarian Notation is the tactical nuclear weapon of source code obfuscation tec
 
  - Insist on using "c" for const in C++ and other languages that directly enforce the const-ness of a variable.
 
- - Seek out and use Hungarian warts that have meaning in languages other than your current language. For example insist on the PowerBuilder `l_` and `a_` {local and argument} scoping prefixes and always use the VB-esque style of having a Hungarian wart for every control type when coding to C++. Try to stay ignorant of the fact that megs of plainly visible MFC source code does not use Hungarian warts for control types.
+ - Seek out and use Hungarian warts that have meaning in languages other than your current language. For example, insist on the PowerBuilder `l_` and `a_` {local and argument} scoping prefixes and always use the VB-esque style of having a Hungarian wart for every control type when coding to C++. Try to stay ignorant of the fact that megs of plainly visible MFC source code do not use Hungarian warts for control types.
 
  - Always violate the Hungarian principle that the most commonly used variables should carry the least extra information around with them. Achieve this end through the techniques outlined above and by insisting that each class type have a custom wart prefix. Never allow anyone to remind you that **no** wart tells you that something **is** a class. The importance of this rule cannot be overstated if you fail to adhere to its principles the source code may become flooded with shorter variable names that have a higher vowel/consonant ratio. In the worst case scenario this can lead to a full collapse of obfuscation and the spontaneous reappearance of English Notation in code!
 
@@ -183,8 +183,8 @@ Hungarian Notation is the tactical nuclear weapon of source code obfuscation tec
 
  - Use to your advantage the principle that the human brain can only hold 7 pieces of information concurrently. For example code written to the above standard has the following properties:
 
-    * a single assignment statement carries 14 pieces of type and name information.
-    * a single function call that passes three parameters and assigns a result carries 29 pieces of type and name information.
+    * A single assignment statement carries 14 pieces of type and name information.
+    * A single function call that passes three parameters and assigns a result carries 29 pieces of type and name information.
     * Seek to improve this excellent, but far too concise, standard. Impress management and coworkers by recommending a 5 letter day of the week prefix to help isolate code written on `Monam` and `FriPM`.
     * It is easy to overwhelm the short term memory with even a moderately complex nesting structure, **especially** when the maintenance programmer can't see the start and end of each block on screen simultaneously.
 
@@ -210,7 +210,7 @@ If you have to define a structure to hold data for callbacks, always call the st
 
 #### Obscure film references
 
-Use constant names like `LancelotsFavouriteColour` instead of `blue` and assign it hex value of `$0204FB`. The color looks identical to pure blue on the screen, and a maintenance programmer would have to work out `0204FB` (or use some graphic tool) to know what it looks like. Only someone intimately familiar with Monty Python and the Holy Grail would know that Lancelot's favorite color was blue. If a maintenance programmer can't quote entire Monty Python movies from memory, he or she has no business being a programmer.
+Use constant names like `LancelotsFavouriteColour` instead of `blue` and assign it a hex value of `$0204FB`. The color looks identical to pure blue on the screen, and a maintenance programmer would have to work out `0204FB` (or use some graphic tool) to know what it looks like. Only someone intimately familiar with Monty Python and the Holy Grail would know that Lancelot's favorite color was blue. If a maintenance programmer can't quote entire Monty Python movies from memory, he or she has no business being a programmer.
 
 ## Camouflage
 
@@ -435,7 +435,7 @@ Never document gotchas in the code. If you suspect there may be a bug in a class
 
 #### Disparage In the Comments
 
-Discourage any attempt to use external maintenance contractors by peppering your code with insulting references to other leading software companies, especial anyone who might be contracted to do the work. e.g.:
+Discourage any attempt to use external maintenance contractors by peppering your code with insulting references to other leading software companies, especially anyone who might be contracted to do the work. e.g.:
 
 ```c
 /* The optimised inner loop.
@@ -461,11 +461,11 @@ On a method called makeSnafucated insert only the JavaDoc `/* make snafucated */
 
 > _The cardinal rule of writing unmaintainable code is to specify each fact in as many places as possible and in as many ways as possible._ - Roedy Green
 
-The key to writing maintainable code is to specify each fact about the application in only one place. To change your mind, you need change it in only one place, and you are guaranteed the entire program will still work. Therefore, the key to writing unmaintainable code is to specify a fact over and over, in as many places as possible, in as many variant ways as possible. Happily, languages like Java go out of their way to make writing this sort of unmaintainable code easy. For example, it is almost impossible to change the type of a widely used variable because all the casts and conversion functions will no longer work, and the types of the associated temporary variables will no longer be appropriate. Further, if the variable is displayed on the screen, all the associated display and data entry code has to be tracked down and manually modified. The Algol family of languages which include C and Java treat storing data in an array, Hashtable, flat file and database with **totally** different syntax. In languages like Abundance, and to some extent Smalltalk, the syntax is identical; just the declaration changes. Take advantage of Java's ineptitude. Put data you know will grow too large for RAM, for now into an array. That way the maintenance programmer will have a horrendous task converting from array to file access later. Similarly place tiny files in databases so the maintenance programmer can have the fun of converting them to array access when it comes time to performance tune.
+The key to writing maintainable code is to specify each fact about the application in only one place. To change your mind, you need to change it in only one place, and you are guaranteed the entire program will still work. Therefore, the key to writing unmaintainable code is to specify a fact over and over, in as many places as possible, in as many variant ways as possible. Happily, languages like Java go out of their way to make writing this sort of unmaintainable code easy. For example, it is almost impossible to change the type of a widely used variable because all the casts and conversion functions will no longer work, and the types of the associated temporary variables will no longer be appropriate. Further, if the variable is displayed on the screen, all the associated display and data entry code has to be tracked down and manually modified. The Algol family of languages which include C and Java treat storing data in an array, Hashtable, flat file and database with **totally** different syntax. In languages like Abundance, and to some extent Smalltalk, the syntax is identical; just the declaration changes. Take advantage of Java's ineptitude. Put data you know will grow too large for RAM, for now into an array. That way the maintenance programmer will have a horrendous task converting from array to file access later. Similarly place tiny files in databases so the maintenance programmer can have the fun of converting them to array access when it comes time to performance tune.
 
 #### Java Casts
 
-Java's casting scheme is a gift from the Gods. You can use it without guilt since the language requires it. Every time you retrieve an object from a Collection you must cast it back to its original type. Thus the type of the variable may be specified in dozens of places. If the type later changes, all the casts must be changed to match. The compiler may or may not detect if the hapless maintenance programmer fails to catch them all (or changes one too many). In a similar way, all matching casts to `(short)` need to be changed to `(int)` if the type of a variable changes from `short` to `int`. There is a movement afoot in invent a generic cast operator `(cast)` and a generic conversion operator `(convert)` that would require no maintenance when the type of variable changes. Make sure this heresy never makes it into the language specification. Vote no on RFE 114691 and on genericity which would eliminate the need for many casts.
+Java's casting scheme is a gift from the Gods. You can use it without guilt since the language requires it. Every time you retrieve an object from a Collection you must cast it back to its original type. Thus the type of the variable may be specified in dozens of places. If the type later changes, all the casts must be changed to match. The compiler may or may not detect if the hapless maintenance programmer fails to catch them all (or changes one too many). In a similar way, all matching casts to `(short)` need to be changed to `(int)` if the type of a variable changes from `short` to `int`. There is a movement afoot to invent a generic cast operator `(cast)` and a generic conversion operator `(convert)` that would require no maintenance when the type of variable changes. Make sure this heresy never makes it into the language specification. Vote no on RFE 114691 and on genericity which would eliminate the need for many casts.
 
 #### Exploit Java's Redundancy
 
@@ -564,7 +564,7 @@ Make as many of your variables as possible static. If _you_ don't need more than
 
 #### Cargill's Quandary
 
-Take advantage of Cargill's quandary (I think this was his) "any design problem can be solved by adding an additional level of indirection, except for too many levels of indirection." Decompose OO programs until it becomes nearly impossible to find a method which actually updates program state. Better yet, arrange all such occurrences to be activated as callbacks from by traversing pointer forests which are known to contain every function pointer used within the entire system. Arrange for the forest traversals to be activated as side-effects from releasing reference counted objects previously created via deep copies which aren't really all that deep.
+Take advantage of Cargill's quandary (I think this was his) "any design problem can be solved by adding an additional level of indirection, except for too many levels of indirection." Decompose OO programs until it becomes nearly impossible to find a method which actually updates program state. Better yet, arrange all such occurrences to be activated as callbacks by traversing pointer forests which are known to contain every function pointer used within the entire system. Arrange for the forest traversals to be activated as side-effects from releasing reference counted objects previously created via deep copies which aren't really all that deep.
 
 #### Packratting
 
@@ -715,7 +715,7 @@ array = new int [] {
 
 #### Convert Indirectly
 
-Java offers great opportunity for obfuscation whenever you have to convert. As a simple example, if you have to convert a double to a String, go circuitously, via Double with `new Double(d).toString()` rather than the more direct `Double.toString(d)`. You can, of course, be far more circuitous than that! Avoid any conversion techniques recommended by the Conversion Amanuensis. You get bonus points for every extra temporary object you leave littering the heap after your conversion.
+Java offers a great opportunity for obfuscation whenever you have to convert. As a simple example, if you have to convert a double to a String, go circuitously, via Double with `new Double(d).toString()` rather than the more direct `Double.toString(d)`. You can, of course, be far more circuitous than that! Avoid any conversion techniques recommended by the Conversion Amanuensis. You get bonus points for every extra temporary object you leave littering the heap after your conversion.
 
 #### Nesting
 
@@ -742,9 +742,9 @@ myfunc(6291, 8)[Array];
 
 Unfortunately, these techniques can only be used in native C classes, not Java.
 
-#### L o n g   L i n e s
+#### L o n g   L i n e s
 
-Try to pack as much as possible into a single line. This saves the overhead of temporary variables, and makes source files shorter by eliminating new line characters and white space. Tip: remove all white space around operators. Good programmers can often hit the 255 character line length limit imposed by some editors. The bonus of long lines is that programmers who cannot read 6 point type must scroll to view them.
+Try to pack as much as possible into a single line. This saves the overhead of temporary variables, and makes source files shorter by eliminating new line characters and white space. Tip: remove all white space around operators. Good programmers can often hit the 255 character line length limit imposed by some editors. The bonus of long lines is that programmers who cannot read 6 point types must scroll to view them.
 
 #### Exceptions
 
@@ -766,7 +766,7 @@ Follow the language lawyer discussions in the newsgroups about what various bits
 *++b ? (*++b + *(b-1)) : 0
 ```
 
-are not defined by the language spec. Every compiler is free to evaluate in a different order. This makes them doubly deadly. Similarly, take advantage of the complex tokenising rules of C and Java by removing all spaces.
+are not defined by the language spec. Every compiler is free to evaluate in a different order. This makes them doubly deadly. Similarly, take advantage of the complex tokenizing rules of C and Java by removing all spaces.
 
 #### Early Returns
 
@@ -790,7 +790,7 @@ If you need several variables of a given type, just define an array of them, the
 
 #### Never Beautify
 
-Never use an automated source code tidier (beautifier) to keep your code aligned. Lobby to have them banned them from your company on the grounds they create false deltas in PVCS/CVS (version control tracking) or that every programmer should have his own indenting style held forever sacrosanct for any module he wrote. Insist that other programmers observe those idiosyncratic conventions in "his " modules. Banning beautifiers is quite easy, even though they save the millions of keystrokes doing manual alignment and days wasted misinterpreting poorly aligned code. Just insist that everyone use the **same** tidied format, not just for storing in the common repository, but also while they are editing. This starts an RWAR and the boss, to keep the peace, will ban automated tidying. Without automated tidying, you are now free to _accidentally_ misalign the code to give the optical illusion that bodies of loops and ifs are longer or shorter than they really are, or that else clauses match a different if than they really do. e.g.
+Never use an automated source code tidier (beautifier) to keep your code aligned. Lobby to have them banned from your company on the grounds they create false deltas in PVCS/CVS (version control tracking) or that every programmer should have his own indenting style held forever sacrosanct for any module he wrote. Insist that other programmers observe those idiosyncratic conventions in "his " modules. Banning beautifiers is quite easy, even though they save the millions of keystrokes doing manual alignment and days wasted misinterpreting poorly aligned code. Just insist that everyone use the **same** tidied format, not just for storing in the common repository, but also while they are editing. This starts an RWAR and the boss, to keep the peace, will ban automated tidying. Without automated tidying, you are now free to _accidentally_ misalign the code to give the optical illusion that bodies of loops and ifs are longer or shorter than they really are, or that else clauses match a different if than they really do. e.g.
 
 ```c
 if(a)
@@ -963,7 +963,7 @@ Computer languages are gradually evolving to become more fool proof. Using state
 
 #### FØRTRAN
 
-Write all your code in FORTRAN. If your boss ask why, you can reply that there are lots of very useful libraries that you can use thus saving time. However the chances of writing maintainable code in FORTRAN are zero, and therefore following the unmaintainable coding guidelines is a lot easier.
+Write all your code in FORTRAN. If your boss asks why, you can reply that there are lots of very useful libraries that you can use thus saving time. However the chances of writing maintainable code in FORTRAN are zero, and therefore following the unmaintainable coding guidelines is a lot easier.
 
 #### Avoid Ada
 
@@ -1002,7 +1002,7 @@ If your boss thinks that his or her 20 year old FORTRAN experience is an excelle
 
 #### Subvert The Help Desk
 
-One way to help ensure the code is full of bugs is to ensure the maintenance programmers never hear about them. This requires subverting the help desk. Never answer the phone. Use an automated voice that says "thank you for calling the helpline. To reach a real person press "1" or leave a voice mail wait for the tone". Email help requests should be ignored other than to assign them a tracking number. The standard response to any problem is " I think your account is locked out. The person able to authorise reinstatement is not available just now."
+One way to help ensure the code is full of bugs is to ensure the maintenance programmers never hear about them. This requires subverting the help desk. Never answer the phone. Use an automated voice that says "thank you for calling the helpline. To reach a real person press "1" or leave a voicemail wait for the tone". Email help requests should be ignored other than to assign them a tracking number. The standard response to any problem is " I think your account is locked out. The person able to authorise reinstatement is not available just now."
 
 #### Keep Your Mouth Shut
 
@@ -1010,7 +1010,7 @@ Be never vigilant of the next Y2K. If you ever spot something that could sneak u
 
 #### Baffle 'Em With Bullshit
 
-Subtlety is a wonderful thing, although sometimes a sledge-hammer is more subtle than other tools. So, a refinement on misleading comments create classes with names like `FooFactory` containing comments with references to the GoF creational patterns (ideally with http links to bogus UML design documents) that have nothing to do with object creation. Play off the maintainer's delusions of competence. More subtly, create Java classes with protected constructors and methods like `Foo f = Foo.newInstance()` that return actual **new instances**, rather than the expected singleton. The opportunities for side-effects are endless.
+Subtlety is a wonderful thing, although sometimes a sledge-hammer is more subtle than other tools. So, a refinement on misleading comments creates classes with names like `FooFactory` containing comments with references to the GoF creational patterns (ideally with http links to bogus UML design documents) that have nothing to do with object creation. Play off the maintainer's delusions of competence. More subtly, create Java classes with protected constructors and methods like `Foo f = Foo.newInstance()` that return actual **new instances**, rather than the expected singleton. The opportunities for side-effects are endless.
 
 #### Book Of The Month Club
 
@@ -1075,7 +1075,7 @@ and left,5 = "without"
 
 #### Delphi/Pascal Only
 
-Don't use functions and procedures. Use the label/goto statements then jump around a lot inside your code using this. It'll drive 'em mad trying to trace through this. Another idea, is just to use this for the hang of it and scramble your code up jumping to and fro in some haphazard fashion.
+Don't use functions and procedures. Use the label/goto statements then jump around a lot inside your code using this. It'll drive 'em mad trying to trace through this. Another idea is just to use this for the hang of it and scramble your code up jumping to and fro in some haphazard fashion.
 
 #### Perl
 
@@ -1108,7 +1108,7 @@ LOCAL lcx
 lcx = TYPE('somevariable')
 ```
 
-The value of lcx is now `'L'` or logical. It is further defined the value of `FALSE`. Just imagine the power of this in writing unmaintainable code.
+The value of lcx is now `'L'` or logical. It further defined the value of `FALSE`. Just imagine the power of this in writing unmaintainable code.
 
 ```foxpro
 LOCAL lc_one, lc_two, lc_three... , lc_n
@@ -1171,7 +1171,7 @@ Stick with what you know and travel light; if you only carry a hammer then all p
 
 #### Standards Schmandards
 
-Whenever possible ignore the coding standards currently in use by thousands of developers in your project's target language and environment. For example insist on STL style coding standards when writing an MFC based application.
+Whenever possible ignore the coding standards currently in use by thousands of developers in your project's target language and environment. For example, insist on STL style coding standards when writing an MFC based application.
 
 #### Reverse the Usual True False Convention
 
@@ -1195,7 +1195,7 @@ someone is bound to "correct" the apparent redundancy, and use var elsewhere in 
 if ( var )
 ```
 
-Another technique is to make `TRUE` and `FALSE` have the same value, though most would consider that out and out cheating. Using values 1 and 2 or -1 and 0 is a more subtle way to trip people up and still look respectable. You can use this same technique in Java by defining a static constant called `TRUE`. Programmers might be more suspicious you are up to no good since there is a built-in literal true in Java.
+Another technique is to make `TRUE` and `FALSE` have the same value, though most would consider that out and out cheating. Using values 1 and 2 or -1 and 0 is a more subtle way to trip people up and still look respectable. You can use this same technique in Java by defining a static constant called `TRUE`. Programmers might be more suspicious you are up to no good since there is a built-in literal truth in Java.
 
 #### Third Party Libraries
 
@@ -1287,7 +1287,7 @@ void* Realocate(void*buf, int os, int ns)
 
 *   Reinvent simple functions which are part of the standard libraries.
 *   The word _Realocate_ is not spelled correctly. Never underestimate the power of creative spelling.
-*   Make a temporary copy of input buffer for no real reason.
+*   Make a temporary copy of an input buffer for no real reason.
 *   Cast things for no reason. `memcpy()` takes `(void*)`, so cast our pointers even though they're already `(void*)`. Bonus for the fact that you could pass anything anyway.
 *   Never bothered to free temp. This will cause a slow memory leak, that may not show up until the program has been running for days.
 *   Copy more than necessary from the buffer just in case. This will only cause a core dump on Unix, not Windows.
@@ -1312,7 +1312,7 @@ Make the body of every method as long as possible - hopefully you never write an
 
 #### One Missing File
 
-Make sure that one or more critical files is missing. This is best done with includes of includes. For example, in your main module, you have
+Make sure that one or more critical files are missing. This is best done with includes of includes. For example, in your main module, you have
 
 ```c
 #include <stdcode.h>
@@ -1324,7 +1324,7 @@ Make sure that one or more critical files is missing. This is best done with inc
 #include "a:\\refcode.h"
 ```
 
-and `refcode.h` is no where to be found.
+and `refcode.h` is nowhere to be found.
 
 #### Write Everywhere, Read Nowhere
 
@@ -1361,3 +1361,4 @@ An early version of this article appeared in Java Developers' Journal (volume 2 
 This essay is a **joke**! I apologise if anyone took this literally. Canadians think it gauche to label jokes with a :-). People paid no attention when I harped about how to write __maintainable code. I found people were more receptive hearing all the goofy things people often do to muck it up. Checking for **un**maintainable design patterns is a rapid way to defend against malicious or inadvertent sloppiness.
 
 _**<small>The original was published on [Roedy Green's Mindproducts](http://mindprod.com/jgloss/unmain.html) site.</small>**_
+
