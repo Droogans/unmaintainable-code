@@ -1090,7 +1090,8 @@ LISP is a dream language for the writer of unmaintainable code. Consider these b
 (defun :-] (<) (= < 2))
 
 (defun !(!)(if(and(funcall(lambda(!)(if(and '(< 0)(< ! 2))1 nil))(1+ !))
-(not(null '(lambda(!)(if(< 1 !)t nil)))))1(* !(!(1- !)))))
+(not(null '(lambda(!)(if(< 1 !)t nil)))))(or(-(lognot(-(+)#c(1 0)))(mod
+#o7 -2))(+(*)#c(1 1)(/(* !))))(* !(!(1- !)))))
 ```
 
 #### Visual Foxpro
